@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAISON VÊTIR — Moda Atemporal</title>
+
+  <!-- Google Fonts: Cormorant Garamond (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== CART SIDEBAR ===================== -->
+  <aside class="cart-sidebar" id="cartSidebar" aria-label="Sacola de compras">
+    <div class="cart-header">
+      <span class="cart-title">Sua Sacola</span>
+      <button class="cart-close" id="cartClose" aria-label="Fechar sacola">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="cart-body">
+      <div class="cart-empty">
+        <i data-lucide="shopping-bag"></i>
+        <p>Sua sacola está vazia.</p>
+        <span>Explore nossa curadoria e adicione peças únicas.</span>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">R$ 0,00</span>
+      </div>
+      <button class="btn-checkout">Finalizar Compra</button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+
+      <!-- Hambúrguer (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+
+      <!-- Logo -->
+      <a href="#" class="logo">MAISON<em>V</em></a>
+
+      <!-- Nav Desktop -->
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#produtos" class="nav-link">Coleção</a></li>
+          <li><a href="#curadoria" class="nav-link">Universo</a></li>
+          <li><a href="#footer" class="nav-link">Contato</a></li>
+        </ul>
+        <!-- Nav mobile close -->
+        <button class="nav-close" id="navClose" aria-label="Fechar menu">
+          <i data-lucide="x"></i>
+        </button>
+      </nav>
+
+      <!-- Icons -->
+      <div class="header-icons">
+        <button class="icon-btn" aria-label="Perfil"><i data-lucide="user"></i></button>
+        <button class="icon-btn cart-trigger" id="cartTrigger" aria-label="Sacola">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Nav overlay (mobile) -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+
+        <div class="hero-content reveal">
+          <p class="hero-overline">Coleção Outono–Inverno 2025</p>
+          <h1 class="hero-title">
+            Silhuetas<br/>
+            <em>que falam</em><br/>
+            por si sós.
+          </h1>
+          <p class="hero-body">
+            Peças construídas com precisão artesanal para quem vive a moda como linguagem — não como tendência.
+          </p>
+          <a href="#produtos" class="btn-cta">
+            <span>Explorar Coleção</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="hero-media reveal reveal-delay-1">
+          <div class="hero-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=900&q=80"
+              alt="Modelo com casaco de linho cru"
+              loading="eager"
+            />
+            <div class="hero-tag">
+              <span>Casaco Linen</span>
+              <strong>R$ 1.890</strong>
+            </div>
+          </div>
+          <div class="hero-accent-img">
+            <img
+              src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=400&q=80"
+              alt="Detalhe de tecido"
+              loading="eager"
+            />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-hint">
+        <div class="scroll-line"></div>
+        <span>SCROLL</span>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUTOS ===================== -->
+    <section class="products" id="produtos">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <h2 class="section-title">Coleção<br/><em>Inverno 25</em></h2>
+          <p class="section-sub">Cada peça, uma história de tecido e forma.</p>
+        </div>
+
+        <div class="products-grid">
+
+          <!-- Card 1 -->
+          <article class="product-card reveal">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80" alt="Trench coat oversized" loading="lazy" />
+              <div class="product-actions">
+                <button class="btn-quick-add" data-name="Trench Coat Oversized" data-price="2490">
+                  <i data-lucide="plus"></i> Quick Add
+                </button>
+                <button class="btn-wishlist" aria-label="Favoritar"><i data-lucide="heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Casacos</span>
+              <h3 class="product-name">TRENCH COAT OVERSIZED</h3>
+              <p class="product-price">R$ 2.490</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="product-card reveal reveal-delay-1">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1544441893-675973e31985?w=600&q=80" alt="Calça wide leg" loading="lazy" />
+              <div class="product-actions">
+                <button class="btn-quick-add" data-name="Calça Wide Leg" data-price="890">
+                  <i data-lucide="plus"></i> Quick Add
+                </button>
+                <button class="btn-wishlist" aria-label="Favoritar"><i data-lucide="heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Calças</span>
+              <h3 class="product-name">CALÇA WIDE LEG</h3>
+              <p class="product-price">R$ 890</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="product-card reveal reveal-delay-2">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Blusa de seda" loading="lazy" />
+              <div class="product-actions">
+                <button class="btn-quick-add" data-name="Blusa Silk Drape" data-price="640">
+                  <i data-lucide="plus"></i> Quick Add
+                </button>
+                <button class="btn-wishlist" aria-label="Favoritar"><i data-lucide="heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Blusas</span>
+              <h3 class="product-name">BLUSA SILK DRAPE</h3>
+              <p class="product-price">R$ 640</p>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="product-card reveal">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Blazer estruturado" loading="lazy" />
+              <div class="product-actions">
+                <button class="btn-quick-add" data-name="Blazer Estruturado" data-price="1750">
+                  <i data-lucide="plus"></i> Quick Add
+                </button>
+                <button class="btn-wishlist" aria-label="Favoritar"><i data-lucide="heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Blazers</span>
+              <h3 class="product-name">BLAZER ESTRUTURADO</h3>
+              <p class="product-price">R$ 1.750</p>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="product-card reveal reveal-delay-1">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80" alt="Vestido midi" loading="lazy" />
+              <div class="product-actions">
+                <button class="btn-quick-add" data-name="Vestido Midi Écru" data-price="1290">
+                  <i data-lucide="plus"></i> Quick Add
+                </button>
+                <button class="btn-wishlist" aria-label="Favoritar"><i data-lucide="heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Vestidos</span>
+              <h3 class="product-name">VESTIDO MIDI ÉCRU</h3>
+              <p class="product-price">R$ 1.290</p>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="product-card reveal reveal-delay-2">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=600&q=80" alt="Cashmere turtleneck" loading="lazy" />
+              <div class="product-actions">
+                <button class="btn-quick-add" data-name="Gola Alta Cashmere" data-price="980">
+                  <i data-lucide="plus"></i> Quick Add
+                </button>
+                <button class="btn-wishlist" aria-label="Favoritar"><i data-lucide="heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Malhas</span>
+              <h3 class="product-name">GOLA ALTA CASHMERE</h3>
+              <p class="product-price">R$ 980</p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="products-cta reveal">
+          <a href="#" class="btn-outline">Ver Coleção Completa <i data-lucide="arrow-right"></i></a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== CURADORIA ===================== -->
+    <section class="curadoria" id="curadoria">
+      <div class="curadoria-inner reveal">
+        <p class="curadoria-eyebrow">Sobre a Maison</p>
+        <blockquote class="curadoria-quote">
+          "Roupa é o primeiro gesto<br/>
+          que o mundo lê em você."
+        </blockquote>
+        <a href="#" class="btn-cta btn-cta--light">
+          <span>Nosso Manifesto</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+      <div class="curadoria-strip" aria-hidden="true">
+        <span>ATEMPORAL</span>
+        <span>·</span>
+        <span>ARTESANAL</span>
+        <span>·</span>
+        <span>CONSCIENTE</span>
+        <span>·</span>
+        <span>AUTORAL</span>
+        <span>·</span>
+        <span>ATEMPORAL</span>
+        <span>·</span>
+        <span>ARTESANAL</span>
+        <span>·</span>
+        <span>CONSCIENTE</span>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section class="features">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-item reveal">
+            <i data-lucide="package"></i>
+            <h4>Envio Grátis</h4>
+            <p>Para compras acima de R$ 500 em todo o Brasil.</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-1">
+            <i data-lucide="refresh-ccw"></i>
+            <h4>30 Dias para Troca</h4>
+            <p>Sem burocracia. Só satisfação garantida.</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-2">
+            <i data-lucide="leaf"></i>
+            <h4>Moda Consciente</h4>
+            <p>Tecidos certificados e produção ética desde 2015.</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-3">
+            <i data-lucide="shield-check"></i>
+            <h4>Compra Segura</h4>
+            <p>Criptografia de ponta e pagamento protegido.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="#" class="logo">MAISON<em>V</em></a>
+          <p>Moda atemporal, feita para durar além das estações.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Pinterest"><i data-lucide="image"></i></a>
+            <a href="#" aria-label="TikTok"><i data-lucide="video"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h5>Navegação</h5>
+          <ul>
+            <li><a href="#">Coleção</a></li>
+            <li><a href="#">Novidades</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h5>Suporte</h5>
+          <ul>
+            <li><a href="#">Tamanhos & Medidas</a></li>
+            <li><a href="#">Entregas</a></li>
+            <li><a href="#">Trocas & Devoluções</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h5>Newsletter</h5>
+          <p>Receba curadoria exclusiva e acesso antecipado a novas coleções.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Seu e-mail" aria-label="E-mail para newsletter" />
+            <button aria-label="Assinar"><i data-lucide="send"></i></button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 Maison Vêtir. Todos os direitos reservados.</span>
+        <div class="footer-legal">
+          <a href="#">Privacidade</a>
+          <a href="#">Termos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
