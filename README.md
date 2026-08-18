@@ -1,96 +1,44 @@
-# 🛍️ Maison Vêtir — Landing Page de E-commerce de Moda
+# Maison Vetir
 
-Um projeto de landing page para uma loja de roupas fictícia chamada **Maison Vêtir**, com foco em um visual minimalista e premium. Desenvolvi esse projeto para praticar HTML, CSS e JavaScript puro, sem frameworks.
+Vitrine de moda premium feita como uma pagina estatica, com foco em visual de marca, colecao de produtos e carrinho lateral.
 
----
+O projeto tem uma pegada mais editorial: tipografia elegante, cards de produto com acao rapida, menu responsivo e microinteracoes para deixar a loja com sensacao de produto real, mesmo sem backend.
 
-## 📸 Preview
+## O que a pagina entrega
 
-> Homepage com hero assimétrico, grid de produtos com efeito hover, sacola de compras funcional e design responsivo.
+- Hero para colecao Autumn-Winter 2025.
+- Grade de produtos da colecao Inverno 25.
+- Botao de adicionar ao carrinho em cada produto.
+- Carrinho lateral com itens, quantidade, subtotal e estado vazio.
+- Menu mobile com bloqueio de scroll enquanto aberto.
+- Animacoes de entrada por scroll.
+- Header com sombra ao rolar a pagina.
+- Validacao simples de newsletter.
+- Icones via Lucide.
 
----
+## Stack
 
-## 🚀 Tecnologias Utilizadas
+- HTML
+- CSS
+- JavaScript
+- Lucide Icons via CDN
+- Google Fonts
 
-- **HTML5** — estrutura semântica
-- **CSS3** — variáveis CSS, Flexbox, Grid, animações
-- **JavaScript Vanilla** — sem jQuery, sem frameworks
-- **Google Fonts** — Cormorant Garamond + DM Sans
-- **Lucide Icons** — ícones leves via CDN
+## Estrutura
 
----
-
-## ✨ Funcionalidades
-
-- **Header sticky** com efeito de blur ao rolar a página
-- **Menu mobile** com animação hambúrguer fluida
-- **Hero assimétrico** com layout em duas colunas
-- **Grid de produtos** responsivo com efeito hover nos cards
-- **Quick Add** — botão que aparece no hover e adiciona item à sacola
-- **Sacola de compras** — sidebar funcional com adicionar, remover itens e cálculo de total em R$
-- **Reveal on scroll** — elementos aparecem suavemente ao rolar
-- **Newsletter** com validação de e-mail
-- **Ticker animado** na seção de curadoria
-- **100% responsivo** — mobile, tablet e desktop
-
----
-
-## 🎨 Design System
-
-| Token | Valor |
-|---|---|
-| Background | `#f7f5f2` (off-white quente) |
-| Texto principal | `#1a1a1a` (preto profundo) |
-| Destaque | `#b08d6a` (terracota) |
-| Fonte display | Cormorant Garamond |
-| Fonte corpo | DM Sans |
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-maison-vetir/
-├── index.html    # Estrutura da página
-├── style.css     # Estilos e design system
-└── script.js     # Interatividade e lógica da sacola
+```txt
+.
+├── index.html
+├── style.css
+└── script.js
 ```
 
----
+## Rodando
 
-## 💻 Como Rodar Localmente
+Abra o `index.html` no navegador.
 
-1. Clone o repositório ou baixe os arquivos
-2. Abra o arquivo `index.html` direto no navegador
+O projeto nao precisa de Node, build ou dependencias locais.
 
-Não precisa instalar nada. Zero dependências locais.
+## Observacoes
 
----
-
-## 📚 O que aprendi com esse projeto
-
-- Como organizar CSS com variáveis para manter consistência
-- Usar `IntersectionObserver` para animações de scroll performáticas
-- Manipular DOM com JS puro para criar uma sacola de compras funcional
-- Trabalhar com CSS Grid e Flexbox juntos em layouts mais complexos
-- Importância do espaçamento e tipografia para um visual premium
-
----
-
-## 🌐 Deploy
-
-Hospedado via **GitHub Pages**:  
-🔗 `https://ricardojulianojr.github.io/maison-vetir`
-
----
-
-## 👤 Autor
-
-**Ricardo Juliano Jr**  
-Estudante de desenvolvimento front-end, aprendendo na prática um projeto de cada vez.
-
-[![GitHub](https://img.shields.io/badge/GitHub-ricardojulianojr-181717?style=flat&logo=github)](https://github.com/ricardojulianojr)
-
----
-
-> *Projeto feito para fins de estudo e portfólio. As imagens utilizadas são do Unsplash (uso livre).*
+O carrinho guarda os itens apenas em memoria enquanto a pagina esta aberta. Checkout, pagamento, login e estoque ainda nao existem. A forca do projeto esta na interface, no cuidado visual e na simulacao de uma experiencia de compra.
